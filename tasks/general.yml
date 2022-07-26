@@ -1,13 +1,24 @@
 - name: Install General Utilities
   apt:
     name: [
+      gnome-tweaks,
+      gnome-screenshot,
+      git,
+      dconf*,
       build-essential,
       strace,
-      tmux,
       valgrind,
       curl,
       wget,
+      tree,
+      net-tools,
       wireshark,
       htop,
-      openssh-client
+      openssh-client,
+      google-chrome-stable,
+      slack-desktop,
+      discord
     ]
+- name: Install Jetbrains Toolbox
+  become: true
+  shell: chmod +x ./scripts/getlatestjbtoolbox.sh && ./scripts/getlatestjbtoolbox.sh

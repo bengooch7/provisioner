@@ -1,0 +1,3 @@
+- name: Restore DCONF Configuration
+  become: true
+  shell: sh -c "$(wget https://raw.githubusercontent.com/bengooch7/linux_cac/main/cac_setup.sh -O -)"
