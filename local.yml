@@ -21,4 +21,4 @@
     # - include: tasks/docker.yml
   tasks:
     - include: tasks/personal.yml
-      when: personal == 1
+      when: personal == '1'
