@@ -11,8 +11,8 @@
       update_cache: true
       state: present
   tasks:
-    become: true
     - name: Install applications for all systems
+      become: true
       - include: tasks/general.yml
       - include: tasks/cac_setup.yml
       - include: tasks/c.yml
