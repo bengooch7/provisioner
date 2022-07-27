@@ -1,2 +1,5 @@
 - name: Personal touches
-  shell: echo "This is the personal part!"
+  apt:
+    name: [
+      steam
+    ]

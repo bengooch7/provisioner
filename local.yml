@@ -12,13 +12,16 @@
       state: present
   tasks:
     become: true
-    # - include: tasks/general.yml
-    # - include: tasks/cac_setup.yml
-    # - include: tasks/c.yml
-    # - include: tasks/python.yml
-    # - include: tasks/golang.yml
-    # - include: tasks/node.yml
-    # - include: tasks/docker.yml
+    - include: tasks/general.yml
+    - include: tasks/cac_setup.yml
+    - include: tasks/c.yml
+    - include: tasks/python.yml
+    - include: tasks/golang.yml
+    - include: tasks/node.yml
+    - include: tasks/docker.yml
+    - include: tasks/postgres.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/dconf.yml
   tasks:
     - include: tasks/personal.yml
       when: personal == '1'
