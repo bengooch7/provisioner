@@ -21,5 +21,4 @@
     ]
 - name: Install Jetbrains Toolbox
   become: yes
-  shell: chmod +x ./scripts/getlatestjbtoolbox.sh
-  shell: ./scripts/getlatestjbtoolbox.sh
+  script: ./scripts/getlatestjbtoolbox.sh

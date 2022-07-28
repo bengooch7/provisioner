@@ -50,7 +50,7 @@ main() {
 
     echo -e "Ready to go! Running Ansible playbooks now.\n\n\n"
 
-    ansible-pull -k -U https://github.com/bengooch7/provisioner -e personal=$personal
+    ansible-pull -K -U https://github.com/bengooch7/provisioner -e personal=$personal
 }
 
 welcome
