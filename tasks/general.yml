@@ -25,3 +25,4 @@
   register: output
 
 - debug: msg = "{{output.stdout}}"
+- debug: msg = "{{output.stdout}}"
