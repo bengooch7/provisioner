@@ -1,4 +1,4 @@
-- hosts: localhost
+- hosts: all
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     personal: $personal
@@ -9,19 +9,19 @@
       force_apt_get: true
       update_cache: true
       state: present
-- name: Install applications for all systems
   tasks:
-    - include_tasks: tasks/general.yml
-    - include_tasks: tasks/cac_setup.yml
-    - include_tasks: tasks/c.yml
-    - include_tasks: tasks/python.yml
-    - include_tasks: tasks/golang.yml
-    - include_tasks: tasks/node.yml
-    - include_tasks: tasks/docker.yml
-    - include_tasks: tasks/postgres.yml
-    - include_tasks: tasks/dotfiles.yml
-    - include_tasks: tasks/dconf.yml
-- name: Install personal environment programs
-  tasks:
+    - name: Install applications for all systems
+      - include_tasks: tasks/general.yml
+      - include_tasks: tasks/cac_setup.yml
+      - include_tasks: tasks/c.yml
+      - include_tasks: tasks/python.yml
+      - include_tasks: tasks/golang.yml
+      - include_tasks: tasks/node.yml
+      - include_tasks: tasks/docker.yml
+      - include_tasks: tasks/postgres.yml
+      - include_tasks: tasks/dotfiles.yml
+      - include_tasks: tasks/dconf.yml
+  
+  - name: Install personal environment programs
     - include_tasks: tasks/personal.yml
-    - when: personal == '1'
+    when: personal == '1'
