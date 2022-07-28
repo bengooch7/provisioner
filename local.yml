@@ -24,4 +24,4 @@
 - name: Install personal environment programs
   tasks:
     - include: tasks/personal.yml
-  when: personal == '1'
+    when: personal == '1'
