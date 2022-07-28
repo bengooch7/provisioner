@@ -7,6 +7,14 @@ YLW='\033[0;33m' # Yellow for notes
 NO_COLOR='\033[0m'      # Revert terminal back to no color
 
 welcome() {
+
+    echo -e "${RED}    ___                _     _                        ${NO_COLOR}"
+    echo -e "${RED}   / _ \\_ __ _____   _(_)___(_) ___  _ __   ___ _ __  ${NO_COLOR}"
+    echo -e "${RED}  / /_)/ '__/ _ \\ \\ / / / __| |/ _ \\| '_ \\ / _ \\ '__| ${NO_COLOR}"
+    echo -e "${RED} / ___/| | | (_) \\ V /| \\__ \\ | (_) | | | |  __/ |    ${NO_COLOR}"
+    echo -e "${RED} \\/    |_|  \\___/ \\_/ |_|___/_|\\___/|_| |_|\\___|_|    ${NO_COLOR}"
+    echo -e "${RED}                                                      ${NO_COLOR}"
+
     echo -e "${YLW}Welcome to Ben's Provisioner!\n\n${NO_COLOR}"
 
 
