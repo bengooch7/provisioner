@@ -4,5 +4,5 @@
 
 - name: Install Golang
   apt:
-    update: true
+    update_cache: true
     name: golang
