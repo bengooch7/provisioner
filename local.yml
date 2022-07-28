@@ -22,6 +22,6 @@
       ansible.builtin.include_tasks: tasks/dotfiles.yml
       ansible.builtin.include_tasks: tasks/dconf.yml
   
-  - name: Install personal environment programs
-    ansible.builtin.include_tasks: tasks/personal.yml
-    when: personal == '1'
+    - name: Install personal environment programs
+      ansible.builtin.include_tasks: tasks/personal.yml
+      when: personal == '1'
