@@ -28,10 +28,10 @@ welcome() {
 
         if [[ $choice == 'p' ]]
         then
-            echo "Provisioning for a ${RED}personal${NO_COLOR} device"
+            echo -e "Provisioning for a ${RED}personal${NO_COLOR} device\n\n"
             personal=1
         else
-            echo "Provisioning for a ${YLW}work${NO_COLOR} device"
+            echo -e "Provisioning for a ${YLW}work${NO_COLOR} device\n\n"
             personal=0
         fi
     done
@@ -40,10 +40,15 @@ welcome() {
 
 main() {
     DEBIAN_FRONTEND=noninteractive sudo apt install -y software-properties-common
+    echo -e "Adding Ansible PPA...\n"
     apt-add-repository -y --update ppa:ansible/ansible
+    echo -e "Installing Ansible...\n"
     DEBIAN_FRONTEND=noninteractive sudo apt install -y ansible git
 
     echo "localhost" >> /etc/ansible/hosts
+
+
+    echo -e "Ready to go! Running Ansible playbooks now.\n\n\n"
 
     ansible-pull -U https://github.com/bengooch7/provisioner -e personal=$personal
 }
