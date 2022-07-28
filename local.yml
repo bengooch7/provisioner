@@ -10,9 +10,13 @@
       update_cache: true
       state: present
   tasks:
-    - name: Install applications for all systems
+    - name: Install general linux applications
       ansible.builtin.include_tasks: tasks/general.yml
+
+    - name: Setup CAC support for linux
       ansible.builtin.include_tasks: tasks/cac_setup.yml
+
+    - name: Install tools for C development
       ansible.builtin.include_tasks: tasks/c.yml
       ansible.builtin.include_tasks: tasks/python.yml
       ansible.builtin.include_tasks: tasks/golang.yml
