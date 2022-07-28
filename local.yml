@@ -21,7 +21,7 @@
     - include: tasks/postgres.yml
     - include: tasks/dotfiles.yml
     - include: tasks/dconf.yml
-    become: true
+    - become: true
   tasks:
     - name: Install personal environment programs
     - include: tasks/personal.yml
