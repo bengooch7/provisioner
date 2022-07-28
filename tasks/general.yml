@@ -20,6 +20,6 @@
       discord
     ]
 - name: Install Jetbrains Toolbox
-  become: true
+  become: yes
   shell: chmod +x ./scripts/getlatestjbtoolbox.sh
   shell: ./scripts/getlatestjbtoolbox.sh
