@@ -34,6 +34,9 @@ main() {
     DEBIAN_FRONTEND=noninteractive sudo apt install -y software-properties-common
     apt-add-repository -y --update ppa:ansible/ansible
     DEBIAN_FRONTEND=noninteractive sudo apt install -y ansible git
+
+    echo "localhost" >> /etc/ansible/hosts
+
     ansible-pull -U https://github.com/bengooch7/provisioner -e personal=$personal
 }
 
