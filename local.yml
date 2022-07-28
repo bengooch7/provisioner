@@ -11,17 +11,17 @@
       state: present
   tasks:
     - name: Install applications for all systems
-      - include_tasks: tasks/general.yml
-      - include_tasks: tasks/cac_setup.yml
-      - include_tasks: tasks/c.yml
-      - include_tasks: tasks/python.yml
-      - include_tasks: tasks/golang.yml
-      - include_tasks: tasks/node.yml
-      - include_tasks: tasks/docker.yml
-      - include_tasks: tasks/postgres.yml
-      - include_tasks: tasks/dotfiles.yml
-      - include_tasks: tasks/dconf.yml
+      ansible.builtin.include_tasks: tasks/general.yml
+      ansible.builtin.include_tasks: tasks/cac_setup.yml
+      ansible.builtin.include_tasks: tasks/c.yml
+      ansible.builtin.include_tasks: tasks/python.yml
+      ansible.builtin.include_tasks: tasks/golang.yml
+      ansible.builtin.include_tasks: tasks/node.yml
+      ansible.builtin.include_tasks: tasks/docker.yml
+      ansible.builtin.include_tasks: tasks/postgres.yml
+      ansible.builtin.include_tasks: tasks/dotfiles.yml
+      ansible.builtin.include_tasks: tasks/dconf.yml
   
   - name: Install personal environment programs
-    - include_tasks: tasks/personal.yml
+    ansible.builtin.include_tasks: tasks/personal.yml
     when: personal == '1'
