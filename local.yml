@@ -10,7 +10,7 @@
       update_cache: true
       state: present
   tasks:
-  - name: Install applications for all systems
+    - name: Install applications for all systems
     include: tasks/general.yml
     include: tasks/cac_setup.yml
     include: tasks/c.yml
@@ -23,6 +23,6 @@
     include: tasks/dconf.yml
     become: true
   tasks:
-    -name: Install personal environment programs
-    - include: tasks/personal.yml
+    - name: Install personal environment programs
+      include: tasks/personal.yml
       when: personal == '1'
