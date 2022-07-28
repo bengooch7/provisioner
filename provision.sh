@@ -45,7 +45,7 @@ main() {
     echo -e "Installing Ansible...\n"
     DEBIAN_FRONTEND=noninteractive sudo apt install -y ansible git
 
-    echo -e "${uname --nodename}" >> /etc/ansible/hosts
+    echo ${uname --nodename} >> /etc/ansible/hosts
 
 
     echo -e "Ready to go! Running Ansible playbooks now.\n\n\n"
