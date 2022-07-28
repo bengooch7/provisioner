@@ -11,17 +11,17 @@
       state: present
 - name: Install applications for all systems
   tasks:
-    - include: tasks/general.yml
-    - include: tasks/cac_setup.yml
-    - include: tasks/c.yml
-    - include: tasks/python.yml
-    - include: tasks/golang.yml
-    - include: tasks/node.yml
-    - include: tasks/docker.yml
-    - include: tasks/postgres.yml
-    - include: tasks/dotfiles.yml
-    - include: tasks/dconf.yml
+    - include_tasks: tasks/general.yml
+    - include_tasks: tasks/cac_setup.yml
+    - include_tasks: tasks/c.yml
+    - include_tasks: tasks/python.yml
+    - include_tasks: tasks/golang.yml
+    - include_tasks: tasks/node.yml
+    - include_tasks: tasks/docker.yml
+    - include_tasks: tasks/postgres.yml
+    - include_tasks: tasks/dotfiles.yml
+    - include_tasks: tasks/dconf.yml
 - name: Install personal environment programs
   tasks:
-    - include: tasks/personal.yml
+    - include_tasks: tasks/personal.yml
     - when: personal == '1'
