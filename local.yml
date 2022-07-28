@@ -18,12 +18,26 @@
 
     - name: Install tools for C development
       ansible.builtin.include_tasks: tasks/c.yml
+
+    - name: Install tools for Python development
       ansible.builtin.include_tasks: tasks/python.yml
+
+    - name: Install tools for GO development
       ansible.builtin.include_tasks: tasks/golang.yml
+
+    - name: Install tools for Node development
       ansible.builtin.include_tasks: tasks/node.yml
+
+    - name: Install Docker
       ansible.builtin.include_tasks: tasks/docker.yml
+
+    - name: Install Postgres
       ansible.builtin.include_tasks: tasks/postgres.yml
+
+    - name: Pull .dotfiles from GitHub repository and restore them
       ansible.builtin.include_tasks: tasks/dotfiles.yml
+
+    - name: Restore dconf settings
       ansible.builtin.include_tasks: tasks/dconf.yml
   
     - name: Install personal environment programs
