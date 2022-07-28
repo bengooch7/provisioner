@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: localhost
   vars:
     home: "{{ lookup('env', 'HOME') }}"
     personal: $personal
