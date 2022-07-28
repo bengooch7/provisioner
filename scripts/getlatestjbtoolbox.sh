@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 [ $(id -u) != "0" ] && exec sudo "$0" "$@"
 echo -e " \e[94mInstalling Jetbrains Toolbox\e[39m"
