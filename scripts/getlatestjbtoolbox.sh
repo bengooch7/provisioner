@@ -37,5 +37,7 @@ ln -s ${DIR}/jetbrains-toolbox /usr/local/bin/jetbrains-toolbox
 chmod -R +rwx /usr/local/bin/jetbrains-toolbox
 echo ""
 rm ${DEST}
-./usr/local/bin/jetbrains-toolbox
+
+jetbrains-toolbox
+
 echo  -e "\e[32mDone.\e[39m"
