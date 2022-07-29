@@ -1,7 +1,6 @@
 - name: Install
-  become: yes
+  become: true
   script: ./scripts/getlatestjbtoolbox.sh
-  register: output
 
 - name: Run Jetbrains Toolbox
   shell: jetbrains-toolbox

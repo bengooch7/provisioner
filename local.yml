@@ -3,15 +3,15 @@
     home: "{{ lookup('env', 'HOME') }}"
     personal: $personal
   pre_tasks:
-  - name: Update Apt
-    become: true
-    apt:
-      force_apt_get: true
-      update_cache: true
-      state: present
+    - name: Update Apt
+      become: true
+      apt:
+        force_apt_get: true
+        update_cache: true
+        state: present
   tasks:
-    - name: Install general linux applications
-      ansible.builtin.include_tasks: tasks/general.yml
+    # - name: Install general linux applications
+    #   ansible.builtin.include_tasks: tasks/general.yml
 
     # - name: Install JetBrains Toolbox
     #   ansible.builtin.include_tasks: tasks/jbtoolbox.yml
@@ -19,11 +19,11 @@
     # - name: Setup CAC support for linux
     #   ansible.builtin.include_tasks: tasks/cac_setup.yml
 
-    - name: Install tools for C development
-      ansible.builtin.include_tasks: tasks/c.yml
+    # - name: Install tools for C development
+    #   ansible.builtin.include_tasks: tasks/c.yml
 
-    - name: Install tools for Python development
-      ansible.builtin.include_tasks: tasks/python.yml
+    # - name: Install tools for Python development
+    #   ansible.builtin.include_tasks: tasks/python.yml
 
     # - name: Install tools for GO development
     #   ansible.builtin.include_tasks: tasks/golang.yml
@@ -42,7 +42,7 @@
 
     # - name: Restore dconf settings
     #   ansible.builtin.include_tasks: tasks/dconf.yml
-  
+
     # - name: Install personal environment programs
     #   ansible.builtin.include_tasks: tasks/personal.yml
     #   when: personal == '1'

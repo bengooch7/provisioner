@@ -1,22 +1,22 @@
 - name: Install General Utilities
   apt:
-    name: [
-      gnome-tweaks,
-      gnome-screenshot,
-      git,
-      dconf*,
-      build-essential,
-      strace,
-      valgrind,
-      curl,
-      wget,
-      tree,
-      net-tools,
-      wireshark,
-      htop,
-      openssh-client,
-      google-chrome-stable,
-      slack-desktop,
-      discord
-    ]
-
+    name:
+      [
+        gnome-tweaks,
+        gnome-screenshot,
+        git,
+        dconf*,
+        build-essential,
+        strace,
+        valgrind,
+        curl,
+        wget,
+        tree,
+        net-tools,
+        wireshark,
+        htop,
+        openssh-client,
+        google-chrome-stable,
+        slack-desktop,
+        discord,
+      ]
