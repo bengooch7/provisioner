@@ -4,7 +4,7 @@
     personal: $personal
   pre_tasks:
     - name: Update Apt
-      become: true
+      become: yes
       apt:
         force_apt_get: true
         update_cache: true
