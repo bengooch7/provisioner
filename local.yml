@@ -13,11 +13,11 @@
     - name: Install general linux applications
       ansible.builtin.include_tasks: tasks/general.yml
 
-    - name: Install JetBrains Toolbox
-      ansible.builtin.include_tasks: tasks/jbtoolbox.yml
+    # - name: Install JetBrains Toolbox
+    #   ansible.builtin.include_tasks: tasks/jbtoolbox.yml
 
-    - name: Setup CAC support for linux
-      ansible.builtin.include_tasks: tasks/cac_setup.yml
+    # - name: Setup CAC support for linux
+    #   ansible.builtin.include_tasks: tasks/cac_setup.yml
 
     - name: Install tools for C development
       ansible.builtin.include_tasks: tasks/c.yml
@@ -25,11 +25,11 @@
     - name: Install tools for Python development
       ansible.builtin.include_tasks: tasks/python.yml
 
-    - name: Install tools for GO development
-      ansible.builtin.include_tasks: tasks/golang.yml
+    # - name: Install tools for GO development
+    #   ansible.builtin.include_tasks: tasks/golang.yml
 
-    - name: Install tools for Node development
-      ansible.builtin.include_tasks: tasks/node.yml
+    # - name: Install tools for Node development
+    #   ansible.builtin.include_tasks: tasks/node.yml
 
     - name: Install Docker
       ansible.builtin.include_tasks: tasks/docker.yml
