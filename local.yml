@@ -10,11 +10,11 @@
       update_cache: true
       state: present
   tasks:
-    # - name: Install general linux applications
-    #   ansible.builtin.include_tasks: tasks/general.yml
+    - name: Install general linux applications
+      ansible.builtin.include_tasks: tasks/general.yml
 
-    # - name: Install JetBrains Toolbox
-    #   ansible.builtin.include_tasks: tasks/jbtoolbox.yml
+    - name: Install JetBrains Toolbox
+      ansible.builtin.include_tasks: tasks/jbtoolbox.yml
 
     - name: Setup CAC support for linux
       ansible.builtin.include_tasks: tasks/cac_setup.yml

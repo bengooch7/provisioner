@@ -1,5 +1,5 @@
 - name: Install Docker
-  shell: bash -c "$(wget https://get.docker.com -O -)" && apt install docker-compose-pl
+  shell: bash -c "$(wget https://get.docker.com -O -)"
 - name: Install Docker Compose Plugin
   apt:
     name: [docker-compose-plugin]
