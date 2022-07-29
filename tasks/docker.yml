@@ -1,5 +1,5 @@
 - name: Install Docker
-  script: https://get.docker.com
+  script: bash -c "$(wget https://get.docker.com -O -)"
   become: yes
 
 - name: Install Docker Compose Plugin
