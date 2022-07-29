@@ -45,7 +45,7 @@ main() {
     echo -e "Installing Ansible...\n"
     DEBIAN_FRONTEND=noninteractive sudo apt install -y ansible git
 
-    if [[which ansible-pull]] 
+    if which ansible-pull
     then
 
         uname --nodename >> /etc/ansible/hosts
