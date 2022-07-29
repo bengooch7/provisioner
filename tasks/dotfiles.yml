@@ -9,7 +9,7 @@
     dest: "{{ home }}/.dotfiles"
     recursive: yes
     update: yes
-    accept_hostkey: yes
+    # accept_hostkey: yes
     # version: master
 
 - name: Stow dotfiles
