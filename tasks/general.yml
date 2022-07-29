@@ -19,10 +19,4 @@
       slack-desktop,
       discord
     ]
-- name: Install Jetbrains Toolbox
-  become: yes
-  script: ./scripts/getlatestjbtoolbox.sh
-  register: output
 
-- debug: msg = "{{output.stdout}}"
-- debug: msg = "{{output.stdout}}"
