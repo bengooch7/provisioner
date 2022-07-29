@@ -1,2 +1,2 @@
 - name: Restore DCONF Configuration
-  shell: sudo bash -c "$(dconf load / < dconf-config)"
+  shell: sudo dconf load / < dconf-config

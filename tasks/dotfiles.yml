@@ -5,11 +5,12 @@
 - name: Cloning Dotfiles
   ansible.builtin.git:
     repo: "git@github.com:bengooch7/dotfiles.git"
+    clone: yes
     dest: "{{ home }}/.dotfiles"
     recursive: yes
     update: yes
     accept_hostkey: yes
-    version: master
+    # version: master
 
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && chmod +x stow-me.sh && ./stow-me.sh && cd ..
