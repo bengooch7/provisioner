@@ -4,4 +4,4 @@
   register: output
 
 - name: Run Jetbrains Toolbox
-  cmd: jetbrains-toolbox
+  shell: jetbrains-toolbox
