@@ -45,13 +45,23 @@ main() {
     echo -e "Installing Ansible...\n"
     DEBIAN_FRONTEND=noninteractive sudo apt install -y ansible git
 
-    uname --nodename >> /etc/ansible/hosts
+    if [[which ansible-pull]] 
+    then
+
+        uname --nodename >> /etc/ansible/hosts
 
 
-    echo -e "Ready to go! Running Ansible playbooks now.\n\n\n"
+        echo -e "Ready to go! Running Ansible playbooks now.\n\n\n"
 
-    ansible-pull -K -U https://github.com/bengooch7/provisioner -e personal=$personal
-}
+        ansible-pull -K -U https://github.com/bengooch7/provisioner -e personal=$personal
+
+    else
+        echo -e "${RED}\nFailed to install Ansible. Exiting now.${NO_COLOR}"
+        exit
+    fi
+    
+    echo -e "\nAll tasks complete!\n"
+}       
 
 welcome
 
