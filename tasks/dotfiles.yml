@@ -9,8 +9,8 @@
     dest: "{{ home }}/.dotfiles"
     recursive: yes
     update: yes
-    # accept_hostkey: yes
-    # version: master
+    accept_hostkey: yes
+    version: master
 
 - name: Stow dotfiles
   shell: cd $HOME/.dotfiles && chmod +x stow-me.sh && ./stow-me.sh && cd ..
